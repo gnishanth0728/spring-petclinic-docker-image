@@ -1,11 +1,11 @@
 trigger: none
 pr:
   branches:
-  include:
-  - main
+    include:
+    - main
   paths:
-  exclude:
-  - .gitignore/*
+    exclude:
+    - .gitignore/*
 
 parameters:
   - name: DOCKER_BUILD_IMAGE
