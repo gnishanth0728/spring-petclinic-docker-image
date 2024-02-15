@@ -1,8 +1,14 @@
+parameters:
+- name: PET_CLINIC_APP
+  type: object
+
 stages:
 - stage: Build
   displayName: Build petclinic app
   jobs:
   - job: Build_Petclinic
+    pool:
+      name: $(default_pool)
     container: default_image
     steps:
     - checkout: self

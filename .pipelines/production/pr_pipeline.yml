@@ -13,10 +13,22 @@ parameters:
     type: string
     default: 'openjdk:17-oracle'
 
+  - name: PET_CLINIC_APP
+    displayname: Pet Clinic App
+    type: object
+    default:
+    - name: Pet_app
+      build:
+      docker_image: default_image  
+
 resources:
   containers:
   - container: default image
     image: ${{ parameters.DOCKER_BUILD_IMAGE }}
+
+variables:
+- name: default_pool
+  value: Default
 
 stages:
 - template: ../lib/app/stages/build/build.yml    
