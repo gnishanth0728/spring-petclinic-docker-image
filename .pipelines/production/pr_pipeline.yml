@@ -14,7 +14,7 @@ parameters:
     default: 'openjdk:17-oracle'
 
   - name: PET_CLINIC_APP
-    displayname: Pet Clinic App
+    displayName: Pet Clinic App
     type: object
     default:
     - name: Pet_app
