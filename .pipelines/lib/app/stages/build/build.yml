@@ -3,7 +3,7 @@ stages:
   displayName: Build petclinic app
   jobs:
   - job: Build_Petclinic
-    conatainer: default_image
+    container: default_image
     steps:
     - checkout: self
       clean: true
