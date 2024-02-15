@@ -12,3 +12,9 @@ parameters:
     displayName: Docker Image
     type: string
     default: 'openjdk:17-oracle'
+
+resources:
+  containers:
+  - container: default image
+    image: ${{ parameters.DOCKER_BUILD_IMAGE }}
+    
