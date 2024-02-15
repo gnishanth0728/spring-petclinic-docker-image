@@ -17,4 +17,6 @@ resources:
   containers:
   - container: default image
     image: ${{ parameters.DOCKER_BUILD_IMAGE }}
-    
+
+stages:
+- template: ../lib/app/stages/build/build.yml    

@@ -1,0 +1,11 @@
+stages:
+- stage: Build
+  displayName: Build petclinic app
+  jobs:
+  - job: Build_Petclinic
+    conatainer: default_image
+    steps:
+    - checkout: self
+      clean: true
+      submodules: recursive
+    - template: ../../jobs/build/build.yml  
