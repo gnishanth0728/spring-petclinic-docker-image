@@ -23,7 +23,7 @@ parameters:
 
 resources:
   containers:
-  - container: default image
+  - container: default_image
     image: ${{ parameters.DOCKER_BUILD_IMAGE }}
 
 variables:
