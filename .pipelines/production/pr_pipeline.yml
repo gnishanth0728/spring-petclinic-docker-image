@@ -17,9 +17,9 @@ parameters:
     displayName: Pet Clinic App
     type: object
     default:
-    - name: Pet_app
+    - name: Pet_App
       build:
-      docker_image: default_image  
+        docker_image: default_image  
 
 resources:
   containers:
