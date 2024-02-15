@@ -1,0 +1,14 @@
+trigger: none
+pr:
+  branches:
+  include:
+  - main
+  paths:
+  exclude:
+  - .gitignore/*
+
+parameters:
+  - name: DOCKER_BUILD_IMAGE
+    displayName: Docker Image
+    type: string
+    default: 'openjdk:17-oracle'
