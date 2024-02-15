@@ -1,5 +1,5 @@
 parameters:
-- name: PET_CLINIC_APP
+- name: APP
   type: object
 
 stages:
