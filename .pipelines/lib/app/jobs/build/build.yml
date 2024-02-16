@@ -1,0 +1,7 @@
+steps:
+- bash: |
+    echo "Build petclinic app"
+    chmod +x mvnw
+    ./mvnw dependency:resolve
+  displayName: Build Petclinic app  
+   

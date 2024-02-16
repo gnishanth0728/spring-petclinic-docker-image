@@ -1,0 +1,37 @@
+trigger: none
+pr:
+  branches:
+    include:
+    - main
+  paths:
+    exclude:
+    - .gitignore/*
+
+parameters:
+  - name: DOCKER_BUILD_IMAGE
+    displayName: Docker Image
+    type: string
+    default: 'gnishanth777/springapp:1.4.0'
+
+  - name: PET_CLINIC_APP
+    displayName: Pet Clinic App
+    type: object
+    default:
+    - name: Pet_App
+      build:
+        docker_image: default_image  
+
+resources:
+  containers:
+  - container: default_image
+    image: ${{ parameters.DOCKER_BUILD_IMAGE }}
+
+variables:
+- name: default_pool
+  value: Azure Pipelines
+
+stages:
+- ${{ each app in parameters.PET_CLINIC_APP }}:
+  - template: ../lib/app/stages/build/build.yml
+    parameters:
+      APP: ${{ app }}    

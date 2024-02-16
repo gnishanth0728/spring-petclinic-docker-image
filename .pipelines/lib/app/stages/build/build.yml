@@ -1,0 +1,18 @@
+parameters:
+- name: APP
+  type: object
+
+stages:
+- stage: Build
+  displayName: Build petclinic app
+  jobs:
+  - job: Build_Petclinic
+    pool:
+      name: $(default_pool)
+    container: default_image
+    steps:
+    - checkout: self
+      clean: true
+      submodules: recursive
+      path: $(code_repo_name)
+    - template: ../../jobs/build/build.yml  
