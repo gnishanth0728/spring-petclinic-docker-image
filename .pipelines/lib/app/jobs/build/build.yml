@@ -1,6 +1,6 @@
 steps:
 - bash: |
     echo "Build petclinic app"
-    mvn install
+    mvn -X clean install
   displayName: Build Petclinic app  
    
