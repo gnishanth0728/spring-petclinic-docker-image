@@ -11,7 +11,7 @@ parameters:
   - name: DOCKER_BUILD_IMAGE
     displayName: Docker Image
     type: string
-    default: 'gnishanth777/springapp:1.2.0'
+    default: 'gnishanth777/springapp:1.3.0'
 
   - name: PET_CLINIC_APP
     displayName: Pet Clinic App
