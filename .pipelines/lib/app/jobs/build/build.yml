@@ -1,4 +1,6 @@
 steps:
 - bash: |
     echo "Build petclinic app"
+    ./mvnw dependency:resolve
+  displayName: Build Petclinic app  
    
