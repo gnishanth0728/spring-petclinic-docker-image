@@ -1,6 +1,6 @@
 steps:
 - bash: |
     echo "Build petclinic app"
-    ./mvnw dependency:resolve
+    mvn install
   displayName: Build Petclinic app  
    
